@@ -1,4 +1,5 @@
 /*Some fixes to be done on the animations of the main section*/
+/*Services section is not completed yet*/
 
 @import url("https://fonts.googleapis.com/css?family=Catamaran|Liu+Jian+Mao+Cao|Lobster&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Amatic+SC|Dancing+Script|Liu+Jian+Mao+Cao|Pacifico|Source+Code+Pro&display=swap");
@@ -13,7 +14,10 @@
   --greycolor: #595e5a;
 }
 
-
+* {
+  margin: 0;
+  padding: 0;
+}
 /*Main section*/
 
 .main {
@@ -47,6 +51,7 @@
   text-transform: capitalize;
   margin-top: 0;
   color: rgba(6, 255, 12, 1);
+  margin: 50px;
 
   animation: moving-subheading 4s ease-in-out;
 }
@@ -121,8 +126,7 @@
 
 .gradinent {
   height: 0.5rem;
-  
-  
+
   background: linear-gradient(
     to left,
     var(--primarycolor),
@@ -130,16 +134,61 @@
     var(--primarycolor),
     rgba(230, 45, 23)
   );
- 
 }
 
 /*End of main section*/
 
 /*our services section*/
 
-.service-icon{
-  font-size:2rem;
+.service-icon {
+  font-size: 3.9rem;
+  margin-bottom: 450px;
+}
+.service-item {
+  background: var(--greycolor);
+  transition: var(--mainTransition);
+  min-height: 10rem;
 }
 
+.services {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.service-paragraph {
+  max-width: 450px;
+  text-align: center;
+  margin: 0 auto;
+}
+.service-item:hover {
+  background: rgba(6, 255, 12, 1);
+}
+
+.service-item:hover .service-icon {
+  transform: translateY(-5px);
+}
+
+.service-item:hover .service-heading {
+  color: white;
+}
+
+.service-item:hover .service-subheading {
+  color: var(--greycolor);
+}
+
+@media screen and (min-width: 992px) {
+  .service-item {
+    width: 50%;
+    float: left;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .service-item {
+    width: 25%;
+    float: left;
+    min-height: 15rem;
+  }
+}
 
 /*End of our services section*/
