@@ -1,3 +1,5 @@
+/*Some fixes to be done on the animations of the main section*/
+
 @import url("https://fonts.googleapis.com/css?family=Catamaran|Liu+Jian+Mao+Cao|Lobster&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Amatic+SC|Dancing+Script|Liu+Jian+Mao+Cao|Pacifico|Source+Code+Pro&display=swap");
 :root {
@@ -8,9 +10,16 @@
     "Lobster", cursive;
   --StylishFont: font-family "Source Code Pro", monospace "Liu Jian Mao Cao",
     cursive "Pacifico", cursive "Dancing Script", cursive "Amatic SC", cursive;
+  --greycolor: #595e5a;
 }
+
+
+/*Main section*/
+
 .main {
-  background: url("mainbcg.jpg");
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("mainbcg.jpg") no-repeat;
+
   background-size: cover;
   background-repeat: no-repeat;
   width: 100vw;
@@ -30,7 +39,7 @@
   font-size: 65px;
   margin-bottom: 32px;
 
-  /*animation*/
+  animation: moving-heading 4s ease-in-out;
 }
 
 .sub-heading {
@@ -39,7 +48,7 @@
   margin-top: 0;
   color: rgba(6, 255, 12, 1);
 
-  /*animation*/
+  animation: moving-subheading 4s ease-in-out;
 }
 
 .main-button {
@@ -51,12 +60,86 @@
   outline: 0.2rem solid rgba(12, 255, 12, 0.8);
   outline-offset: 6px;
   font-size: 34px;
-  color: var(--primarycolor);
+  color: var(--greycolor);
   text-transform: capitalize;
   transition: var(--mainTransition);
   letter-spacing: 4px;
-  /*animation*/
+  animation: bounce-button 4s ease-in-out;
 }
 
 .main-button:hover {
+  color: var(--primarycolor);
 }
+
+/*Animations for main section*/
+
+@keyframes bounce-button {
+  0% {
+    transform: scale(2);
+  }
+
+  50% {
+    transform: scale(1);
+  }
+
+  75% {
+    transform: scale(1.5);
+  }
+
+  100% {
+    tranform: scale(1);
+  }
+}
+
+@keyframes moving-heading {
+  0% {
+    transform: translateX(500px);
+  }
+
+  50% {
+    transform: translateX(-500px);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes moving-subheading {
+  0% {
+    transform: translateX(-500px);
+  }
+
+  50% {
+    transform: translateX(500px);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.gradinent {
+  height: 0.5rem;
+  
+  
+  background: linear-gradient(
+    to left,
+    var(--primarycolor),
+    var(--greencolor),
+    var(--primarycolor),
+    rgba(230, 45, 23)
+  );
+ 
+}
+
+/*End of main section*/
+
+/*our services section*/
+
+.service-icon{
+  font-size:2rem;
+}
+
+
+/*End of our services section*/
