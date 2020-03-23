@@ -11,7 +11,7 @@
     "Lobster", cursive;
   --StylishFont: font-family "Source Code Pro", monospace "Liu Jian Mao Cao",
     cursive "Pacifico", cursive "Dancing Script", cursive "Amatic SC", cursive;
-  --greycolor: #595e5a;
+  --greycolor: #77997f;
 }
 
 * {
@@ -143,11 +143,13 @@
 .service-icon {
   font-size: 3.9rem;
   margin-bottom: 450px;
+  margin-top: 500px;
 }
 .service-item {
   background: var(--greycolor);
   transition: var(--mainTransition);
   min-height: 10rem;
+  padding-top: 45px;
 }
 
 .services {
@@ -164,8 +166,8 @@
   background: rgba(6, 255, 12, 1);
 }
 
-.service-item:hover .service-icon {
-  transform: translateY(-5px);
+.service:hover .fas {
+  transform: scale(2);
 }
 
 .service-item:hover .service-heading {
@@ -191,4 +193,20 @@
   }
 }
 
+.service {
+  margin-bottom: 45rem;
+}
+
 /*End of our services section*/
+
+/*Menu section*/
+.menu {
+  margin-top: 35rem;
+  background: rgba(134, 119, 117, 0.7);
+}
+
+.product {
+  text-align: center;
+}
+
+/*End of Menu section*/
