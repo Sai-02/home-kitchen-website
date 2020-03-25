@@ -202,11 +202,32 @@
 /*Menu section*/
 .menu {
   margin-top: 35rem;
-  background: rgba(134, 119, 117, 0.7);
+  background: rgba(134, 119, 117, 0.4);
+  display: flex;
+  justify-content: space-between;
 }
 
 .product {
   text-align: center;
+  margin-bottom: 53px;
+}
+.product-img {
+  height: 25rem;
+}
+
+.description {
+  max-width: 25rem;
+  margin: 0 auto;
+  color: #00c1fc;
+  font-size: 35px;
+}
+@media screen and (min-width: 962px) {
+  .product {
+    width: 20%;
+    float: left;
+    margin-left: 2rem;
+    margin-right: 2rem;
+  }
 }
 
 /*End of Menu section*/
